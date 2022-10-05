@@ -34,6 +34,8 @@
     
     img {
         display: block;
+        max-width: 100%;
+        height: auto;
     }
     
     button {
@@ -41,6 +43,7 @@
     }
     
     .container {
+        /* outline: solid tomato; */
         width: 1200px;
         margin-left: auto;
         margin-right: auto;
@@ -49,7 +52,7 @@
     }
     
     .section {
-        padding: top 94px;
+        padding-top: 94px;
         padding-bottom: 94px;
     }
     
@@ -66,8 +69,6 @@
         letter-spacing: 0.03em;
         text-decoration: none;
         color: #000000;
-        margin-top: 24px;
-        margin-bottom: 25px;
         margin-right: 93px;
     }
     
@@ -76,15 +77,14 @@
     }
     /* header */
     
+    .header-border {
+        border-bottom: 1px solid #ECECEC;
+    }
+    
     .menu {
         display: flex;
         align-items: center;
-        border: 1px solid #ECECEC;
-        /* box-sizing: content-box; */
     }
-    /* .third-link {
-        margin-right: 344px;
-    } */
     
     .navigation-menu {
         display: flex;
@@ -98,6 +98,7 @@
     }
     
     .navigation-link {
+        padding: 32px 0;
         font-family: Roboto;
         font-weight: 500;
         font-size: 14px;
@@ -105,6 +106,7 @@
         letter-spacing: 0.02em;
         color: var(--primary-text-color);
         text-decoration: none;
+        display: block;
     }
     
     .current {
@@ -135,7 +137,7 @@
     
     .hero {
         background-color: var(--bcg-black-color);
-        padding-top: 232px;
+        padding-top: 200px;
         padding-bottom: 200px;
     }
     
@@ -181,10 +183,6 @@
     
     .features-item {
         width: 270px;
-    }
-    
-    .features-section {
-        margin-top: 94px;
     }
     
     .visible {
@@ -238,6 +236,11 @@
     }
     /* team */
     
+    .team {
+        background-color: #F5F4FA;
+        ;
+    }
+    
     .card {
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
@@ -245,8 +248,8 @@
     }
     
     .box {
-        margin-top: 30px;
-        margin-bottom: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         display: flex;
         flex-direction: column;
         row-gap: 10px;
@@ -283,12 +286,18 @@
     }
     /* portfolio */
     
+    .bcg-btn {
+        background-color: #F5F5F5;
+    }
+    
     .btn {
         display: flex;
         justify-content: center;
-        column-gap: 52px;
-        padding-top: 94px;
-        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .btn:not(:last-child) {
+        margin-right: 8px;
     }
     
     .primary-btn {
@@ -312,7 +321,7 @@
     .primary-btn:hover,
     .primary-btn:focus {
         color: var(--main-white-color);
-        background-color: var(--accent-color);
+        background-color: #2196F3;
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
         border-radius: 4px;
         padding-left: 22px;
@@ -323,25 +332,28 @@
     /* examples */
     
     .examples-box {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         display: flex;
         flex-direction: column;
         row-gap: 4px;
+        background: #FFFFFF;
+        border-left: 1px solid #EEEEEE;
+        border-right: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
     }
     
     .examples-card {
         width: 370px;
-        background: #FFFFFF;
-        border: 1px solid #EEEEEE;
         box-sizing: border-box;
     }
     
     .examples {
         display: flex;
         flex-wrap: wrap;
-        column-gap: 30px;
+        gap: 30px;
     }
     
     .examples-title {
@@ -359,8 +371,9 @@
     }
     /* footer */
     
-    .footer-list {
+    .footer {
         padding-top: 60px;
+        padding-bottom: 60px;
     }
     
     .temporary-bcg {
@@ -368,6 +381,7 @@
     }
     
     .logo-footer {
+        margin-top: 20px;
         font-family: Raleway;
         font-weight: 700;
         font-size: 26px;
@@ -382,7 +396,10 @@
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
-        margin-top: 20px;
+    }
+    
+    .add-list:not(:last-child) {
+        margin-bottom: 9px;
     }
     
     .bottom-street {
